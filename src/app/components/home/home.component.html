@@ -6,12 +6,12 @@
 </div>
 <div class="outer-cont">
   <h2>JOGO DA VELHA #</h2>
-<!--  <h1 *ngIf="!winner && !isdraw && !freshpage">Jugador: {{player}}</h1>-->
-<!--  <h2 *ngIf="winner">Jugador {{winner}} ha ganado</h2>-->
-<!--  <h2 *ngIf="isdraw">Empate</h2>-->
+  <h1 *ngIf="!winner && !isdraw && !freshpage">Jugador: {{player}}</h1>
+  <h2 *ngIf="winner">Jugador {{winner}} ha ganado</h2>
+  <h2 *ngIf="isdraw">Empate</h2>
   <button (click)="newGame()">Iniciar Jogo</button>
 
-<!--  <main>-->
-<!--    <app-board *ngFor="let val of squares; let i = index" [value]="val"  (click)="makeMove(i)"></app-board>-->
-<!--  </main>-->
+  <main>
+    <app-board *ngFor="let val of squares; let i = index" [value]="val"  (click)="makeMove(i)"></app-board>
+  </main>
 </div>
