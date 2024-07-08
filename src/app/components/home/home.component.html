@@ -1,5 +1,5 @@
 <div class="background">
-  <app-header (newGameEvent)="newGame()"></app-header>
+  <app-header (newGameEvent)="newGame()" (showResultsEvent)="showResults()"></app-header>
 
   <div class="outer-cont">
     <h2 *ngIf="freshpage">JOGO DA VELHA#</h2>
