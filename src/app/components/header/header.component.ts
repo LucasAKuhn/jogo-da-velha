@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  @Output() newGameEvent = new EventEmitter<void>();
 
-  teste() {
-    console.log('teste');
+  newGameClicked() {
+    this.newGameEvent.emit();
   }
 }

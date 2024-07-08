@@ -1,17 +1,15 @@
-
-
-
 <div class="background">
-  <app-header></app-header>
-</div>
-<div class="outer-cont">
-  <h2 *ngIf="freshpage">JOGO DA VELHA#</h2>
-  <h1 *ngIf="!winner && !isdraw && !freshpage">Jogador: {{player}}</h1>
-  <h2 *ngIf="winner">Jogador {{winner}} ganhou</h2>
-  <h2 *ngIf="isdraw">Empate</h2>
-  <button *ngIf="winner || isdraw || freshpage" outline (click)="newGame()">Iniciar Jogo</button>
+  <app-header (newGameEvent)="newGame()"></app-header>
 
-  <main *ngIf="!winner && !isdraw">
-    <app-board *ngFor="let val of squares; let i = index" [value]="val" (click)="makeMove(i)"></app-board>
-  </main>
+  <div class="outer-cont">
+    <h2 *ngIf="freshpage">JOGO DA VELHA#</h2>
+    <h1 *ngIf="!winner && !isdraw && !freshpage">Jogador: {{player}}</h1>
+    <h2 *ngIf="winner">Jogador {{winner}} ganhou</h2>
+    <h2 *ngIf="isdraw">Empate</h2>
+    <button *ngIf="winner || isdraw || freshpage" outline (click)="newGame()">Iniciar Jogo</button>
+
+    <main *ngIf="!winner && !isdraw">
+      <app-board *ngFor="let val of squares; let i = index" [value]="val" (click)="makeMove(i)"></app-board>
+    </main>
+  </div>
 </div>
