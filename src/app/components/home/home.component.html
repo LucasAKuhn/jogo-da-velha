@@ -2,7 +2,7 @@
   <app-header (newGameEvent)="newGame()" (showResultsEvent)="showResults()"></app-header>
 
   <div class="outer-cont">
-    <h2 *ngIf="freshpage">JOGO DA VELHA# teste</h2>
+    <h2 *ngIf="freshpage">JOGO DA VELHA#</h2>
     <h1 *ngIf="!winner && !isdraw && !freshpage">Jogador: {{player}}</h1>
     <h2 *ngIf="winner">Jogador {{winner}} ganhou</h2>
     <h2 *ngIf="isdraw">Empate</h2>
